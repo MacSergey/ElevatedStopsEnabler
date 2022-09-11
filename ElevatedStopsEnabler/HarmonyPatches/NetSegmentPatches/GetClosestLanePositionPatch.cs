@@ -10,7 +10,7 @@ namespace ElevatedStopsEnabler.HarmonyPatches.NetSegmentPatches
         {
             PatchUtil.Patch(
                 new PatchUtil.MethodDefinition(typeof(NetSegment), nameof(NetSegment.GetClosestLanePosition),
-                    argumentTypes:new[] { typeof(Vector3), typeof(NetInfo.LaneType), typeof(VehicleInfo.VehicleType), typeof(VehicleInfo.VehicleType),
+                    argumentTypes:new[] { typeof(Vector3), typeof(NetInfo.LaneType), typeof(VehicleInfo.VehicleType), typeof(VehicleInfo.VehicleCategory), typeof(VehicleInfo.VehicleType),
                     typeof(bool),
                     typeof(Vector3).MakeByRefType(), typeof(int).MakeByRefType(), typeof(float).MakeByRefType(), typeof(Vector3).MakeByRefType(), typeof(int).MakeByRefType(), typeof(float).MakeByRefType()}),
                 new PatchUtil.MethodDefinition(typeof(GetClosestLanePositionPatch), nameof(Prefix))
@@ -21,13 +21,13 @@ namespace ElevatedStopsEnabler.HarmonyPatches.NetSegmentPatches
         {
             PatchUtil.Unpatch(
                 new PatchUtil.MethodDefinition(typeof(NetSegment), nameof(NetSegment.GetClosestLanePosition),
-                    argumentTypes:new[] { typeof(Vector3), typeof(NetInfo.LaneType), typeof(VehicleInfo.VehicleType), typeof(VehicleInfo.VehicleType),
+                    argumentTypes:new[] { typeof(Vector3), typeof(NetInfo.LaneType), typeof(VehicleInfo.VehicleType), typeof(VehicleInfo.VehicleCategory), typeof(VehicleInfo.VehicleType),
                         typeof(bool),
                         typeof(Vector3).MakeByRefType(), typeof(int).MakeByRefType(), typeof(float).MakeByRefType(), typeof(Vector3).MakeByRefType(), typeof(int).MakeByRefType(), typeof(float).MakeByRefType()})
             );
         }
 
-        static bool Prefix(ref NetSegment __instance, NetInfo.LaneType laneTypes, VehicleInfo.VehicleType vehicleTypes, ref bool requireConnect)
+        static bool Prefix(ref NetSegment __instance, ref bool requireConnect)
         {
             if (requireConnect && __instance.Info.m_netAI is RoadBridgeAI)
             {
