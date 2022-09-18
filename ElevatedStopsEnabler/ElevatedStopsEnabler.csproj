@@ -144,7 +144,7 @@
     <Message Text="Deploy to workshop $(WorkshopDir)" Importance="high" />
     <RemoveDir Directories="$(WorkshopDir)" />
     <Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(WorkshopDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
-    <!--<Copy SourceFiles="$(ProjectDir)..\Workshop\PreviewImage$(Type).png" DestinationFiles="$(WorkshopDir)\PreviewImage.png" />-->
+    <Copy SourceFiles="$(ProjectDir)..\Workshop\PreviewImage$(Type).png" DestinationFiles="$(WorkshopDir)\PreviewImage.png" />
   </Target>
   
 </Project>
