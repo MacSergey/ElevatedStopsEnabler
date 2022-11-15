@@ -26,7 +26,7 @@ namespace ElevatedStopsEnabler
         {
             new ModVersion(new Version("2.0"), new DateTime(2022,9,14)),
         };
-        protected override Version RequiredGameVersion => new Version(1, 15, 0, 7);
+        protected override Version RequiredGameVersion => new Version(1, 15, 1, 4);
 
         protected override string IdRaw => nameof(ElevatedStopsEnabler);
         protected override List<BaseDependencyInfo> DependencyInfos
