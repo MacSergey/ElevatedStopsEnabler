@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EB1591
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Localize", "Localize", "{6D346706-9CB0-4763-9321-5DCF5D66EF96}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AutoLayoutPanelShared", "ModsCommon\AutoLayoutPanelShared\AutoLayoutPanelShared.shproj", "{FC5E6F74-8408-4FD8-A46A-A7F549E30454}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ColorsShared", "ModsCommon\ColorsShared\ColorsShared.shproj", "{B3E09C99-1583-40D2-AE3B-AE1453766DC3}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DependencyShared", "ModsCommon\DependencyShared\DependencyShared.shproj", "{2873738F-AA2C-4C8A-BE06-BC59ACCA56F0}"
@@ -59,6 +57,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LocalizeShared.ru-RU", "Mod
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LocalizeManager", "ModsCommon\LocalizeShared\LocalizeManager\LocalizeManager.shproj", "{B21AB183-BAEF-4EAF-ACCB-83D6AE5F2CCB}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MathExtension", "ModsCommon\MathExtension\MathExtension.shproj", "{1D245858-7544-4D78-ACA0-275F110AD04B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Beta Debug|Any CPU = Beta Debug|Any CPU
@@ -89,7 +89,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6D346706-9CB0-4763-9321-5DCF5D66EF96} = {EB1591AB-1BE2-4C30-88C6-50C6432B3CA7}
-		{FC5E6F74-8408-4FD8-A46A-A7F549E30454} = {EB1591AB-1BE2-4C30-88C6-50C6432B3CA7}
 		{B3E09C99-1583-40D2-AE3B-AE1453766DC3} = {EB1591AB-1BE2-4C30-88C6-50C6432B3CA7}
 		{2873738F-AA2C-4C8A-BE06-BC59ACCA56F0} = {EB1591AB-1BE2-4C30-88C6-50C6432B3CA7}
 		{FE0AF823-F63F-4441-B28D-C0890BC0BF6A} = {EB1591AB-1BE2-4C30-88C6-50C6432B3CA7}
@@ -114,6 +113,7 @@ Global
 		{63601BBF-995F-4843-B4E8-A388652BEF2D} = {6D346706-9CB0-4763-9321-5DCF5D66EF96}
 		{1953B648-7E3A-45F1-924D-E490FE6236C7} = {6D346706-9CB0-4763-9321-5DCF5D66EF96}
 		{B21AB183-BAEF-4EAF-ACCB-83D6AE5F2CCB} = {6D346706-9CB0-4763-9321-5DCF5D66EF96}
+		{1D245858-7544-4D78-ACA0-275F110AD04B} = {EB1591AB-1BE2-4C30-88C6-50C6432B3CA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01D973D1-37C6-4F37-A8E7-BFDDEE53357B}
@@ -124,6 +124,7 @@ Global
 		ModsCommon\LocalizeShared\es-ES\LocalizeShared.es-ES.projitems*{120c967c-0dfa-49fe-85e2-a5bf520a619c}*SharedItemsImports = 13
 		ModsCommon\LocalizeShared\ru-RU\LocalizeShared.ru-RU.projitems*{1953b648-7e3a-45f1-924d-e490fe6236c7}*SharedItemsImports = 13
 		ModsCommon\LocalizeShared\it-IT\LocalizeShared.it-IT.projitems*{1b4e8a9a-319b-4f69-aa7b-a47e5c998318}*SharedItemsImports = 13
+		ModsCommon\MathExtension\MathExtension.projitems*{1d245858-7544-4d78-aca0-275f110ad04b}*SharedItemsImports = 13
 		ModsCommon\ModShared\ModsCommonShared.projitems*{24615a21-afa6-42c0-8b7a-4fb3329b056f}*SharedItemsImports = 13
 		ModsCommon\DependencyShared\DependencyShared.projitems*{2873738f-aa2c-4c8a-be06-bc59acca56f0}*SharedItemsImports = 13
 		ModsCommon\LocalizeShared\pl-PL\LocalizeShared.pl-PL.projitems*{2e10b867-4ad3-4b8c-8d0d-1ea122c0f9bd}*SharedItemsImports = 13
@@ -139,7 +140,6 @@ Global
 		ModsCommon\PluginsShared\PluginsShared.projitems*{b92e01e9-0dfc-455f-8164-f68a2a602fbc}*SharedItemsImports = 13
 		ModsCommon\UIShared\ModsUIShared.projitems*{be979510-7832-4714-95a3-305065d9ded6}*SharedItemsImports = 13
 		ModsCommon\LocalizeShared\ko-KR\LocalizeShared.ko-KR.projitems*{c552b590-2769-4548-a774-8f5dd30f578c}*SharedItemsImports = 13
-		ModsCommon\AutoLayoutPanelShared\AutoLayoutPanelShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\ColorsShared\ColorsShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\DependencyShared\DependencyShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\LocalizeShared\de-DE\LocalizeShared.de-DE.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
@@ -156,6 +156,7 @@ Global
 		ModsCommon\LocalizeShared\ru-RU\LocalizeShared.ru-RU.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\LocalizeShared\zh-CN\LocalizeShared.zh-CN.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\LoggerShared\LoggerShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
+		ModsCommon\MathExtension\MathExtension.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\MessageBoxShared\MessageBoxShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\ModShared\ModsCommonShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\PluginsShared\PluginsShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
@@ -165,7 +166,6 @@ Global
 		ModsCommon\WhatsNewMessageBoxShared\WhatsNewMessageBoxShared.projitems*{d447fa3a-3eea-4868-a2a5-9cef9075929b}*SharedItemsImports = 5
 		ModsCommon\MessageBoxShared\MessageBoxShared.projitems*{d5b649ec-0fec-48f3-8316-6e266169cdcc}*SharedItemsImports = 13
 		ModsCommon\LocalizeShared\LocalizeShared.projitems*{f135cd5d-4cab-4347-bf44-1c6d0794a19d}*SharedItemsImports = 13
-		ModsCommon\AutoLayoutPanelShared\AutoLayoutPanelShared.projitems*{fc5e6f74-8408-4fd8-a46a-a7f549e30454}*SharedItemsImports = 13
 		ModsCommon\LoggerShared\LoggerShared.projitems*{fe0af823-f63f-4441-b28d-c0890bc0bf6a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

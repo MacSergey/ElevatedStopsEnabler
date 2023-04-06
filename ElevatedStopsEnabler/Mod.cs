@@ -1,14 +1,11 @@
 ﻿using ColossalFramework;
-using HarmonyLib;
 using ICities;
 using ModsCommon;
 using ModsCommon.Utilities;
+using ModsCommon.Settings;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Resources;
 using UnityEngine;
 
 namespace ElevatedStopsEnabler
@@ -20,11 +17,12 @@ namespace ElevatedStopsEnabler
         protected override ulong StableWorkshopId => 2862992091;
         protected override ulong BetaWorkshopId => 0;
 
-        public override string NameRaw => "Elevated Stops Enabler Revisited";
+        public override string NameRaw => "Elevated Stops Enabler";
         public override string Description => !IsBeta ? Localize.Mod_Description : CommonLocalize.Mod_DescriptionBeta;
         public override List<ModVersion> Versions => new List<ModVersion>()
         {
             new ModVersion(new Version("2.0"), new DateTime(2022,9,14)),
+            new ModVersion(new Version("2.1"), new DateTime(2023,4,6)),
         };
         protected override Version RequiredGameVersion => new Version(1, 16, 1, 2);
 
@@ -37,7 +35,7 @@ namespace ElevatedStopsEnabler
 
                 var oldLocalSearcher = IdSearcher.Invalid & new UserModNameSearcher("Elevated Stops Enabler", BaseMatchSearcher.Option.None);
                 var oldIdSearcher = new IdSearcher(634913093u);
-                infos.Add(new ConflictDependencyInfo(DependencyState.Unsubscribe, oldLocalSearcher | oldIdSearcher));
+                infos.Add(new ConflictDependencyInfo(DependencyState.Unsubscribe, oldLocalSearcher | oldIdSearcher, "Original Elevated Stops Enabler"));
 
                 return infos;
             }

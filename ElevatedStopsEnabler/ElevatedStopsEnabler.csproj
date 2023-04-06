@@ -13,12 +13,12 @@
     <Configurations>Beta Debug;Beta Release;Stable Debug;Stable Release</Configurations>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
-    <Version>2.0.0.4</Version>
-  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == 'Beta Release' OR '$(Configuration)' == 'Beta Debug'">
-    <Version>2.0</Version>
+  <PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
+    <AssemblyVersion>2.1</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stable Release|AnyCPU'">
@@ -54,6 +54,14 @@
   <ItemGroup>
     <EmbeddedResource Remove="Properties\Localize.resx" />
     <EmbeddedResource Remove="Properties\Localize.ru-RU.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\PreviewImage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\PreviewImage.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -93,7 +101,6 @@
     </Compile>
   </ItemGroup>
 
-  <Import Project="..\ModsCommon\AutoLayoutPanelShared\AutoLayoutPanelShared.projitems" Label="Shared" />
   <Import Project="..\ModsCommon\ColorsShared\ColorsShared.projitems" Label="Shared" />
   <Import Project="..\ModsCommon\DependencyShared\DependencyShared.projitems" Label="Shared" />
   <Import Project="..\ModsCommon\LocalizeShared\LocalizeShared.projitems" Label="Shared" />
@@ -117,6 +124,7 @@
   <Import Project="..\ModsCommon\LocalizeShared\pl-PL\LocalizeShared.pl-PL.projitems" Label="Shared" />
   <Import Project="..\ModsCommon\LocalizeShared\pt-PT\LocalizeShared.pt-PT.projitems" Label="Shared" />
   <Import Project="..\ModsCommon\LocalizeShared\ru-RU\LocalizeShared.ru-RU.projitems" Label="Shared" />
+  <Import Project="..\ModsCommon\MathExtension\MathExtension.projitems" Label="Shared" />
 
   <PropertyGroup Condition="'$(Configuration)' == 'Stable Release' OR '$(Configuration)' == 'Stable Debug'">
     <WorkshopId>2862992091</WorkshopId>
