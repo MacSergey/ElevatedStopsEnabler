@@ -21,10 +21,10 @@ namespace ElevatedStopsEnabler
         public override string Description => !IsBeta ? Localize.Mod_Description : CommonLocalize.Mod_DescriptionBeta;
         public override List<ModVersion> Versions => new List<ModVersion>()
         {
-            new ModVersion(new Version("2.0"), new DateTime(2022,9,14)),
-            new ModVersion(new Version("2.1"), new DateTime(2023,4,6)),
+            new ModVersion(new Version(2, 1), new DateTime(2023, 4, 6)),
+            new ModVersion(new Version(2, 0), new DateTime(2022, 9, 14)),
         };
-        protected override Version RequiredGameVersion => new Version(1, 16, 1, 2);
+        protected override Version RequiredGameVersion => new Version(1, 17, 0, 3);
 
         protected override string IdRaw => nameof(ElevatedStopsEnabler);
         protected override List<BaseDependencyInfo> DependencyInfos
